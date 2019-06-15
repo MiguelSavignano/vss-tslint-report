@@ -1,0 +1,30 @@
+{
+  "id": "288d5772-7d7d-43b4-8281-c54a290897ef",
+  "name": "tslint-report",
+  "friendlyName": "tslint-report",
+  "description": "tslint report result",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "author": "miguel-savignano",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "instanceNameFormat": "Echo $(samplestring)",
+  "inputs": [
+    {
+      "name": "samplestring",
+      "type": "string",
+      "label": "Sample String",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "A sample string"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "index.js"
+    }
+  }
+}
