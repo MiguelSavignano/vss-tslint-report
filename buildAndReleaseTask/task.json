@@ -11,23 +11,23 @@
     "Minor": 1,
     "Patch": 0
   },
-  "instanceNameFormat": "Echo $(samplestring)",
+  "instanceNameFormat": "TSlint report",
   "inputs": [
     {
       "name": "workDir",
       "type": "string",
       "label": "Working folder that contains package.json",
-      "defaultValue": "",
+      "defaultValue": "./",
       "required": true,
       "helpMarkDown": "Working folder that contains package.json"
     },
     {
       "name": "filePath",
       "type": "string",
-      "label": "Tslint results files",
-      "defaultValue": "",
+      "label": "TSlint result file",
+      "defaultValue": "tslint-result.json",
       "required": true,
-      "helpMarkDown": "Tslint results files"
+      "helpMarkDown": "TSlint result file"
     }
   ],
   "execution": {
