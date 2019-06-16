@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "run": "ts-node index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ext": "tfx extension create --manifest-globs vss-extension.json",
     "build:ts": "tsc"

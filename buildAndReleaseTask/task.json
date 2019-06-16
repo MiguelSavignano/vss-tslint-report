@@ -14,12 +14,20 @@
   "instanceNameFormat": "Echo $(samplestring)",
   "inputs": [
     {
-      "name": "samplestring",
+      "name": "workDir",
       "type": "string",
-      "label": "Sample String",
+      "label": "Working folder that contains package.json",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "A sample string"
+      "helpMarkDown": "Working folder that contains package.json"
+    },
+    {
+      "name": "filePath",
+      "type": "string",
+      "label": "Tslint results files",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Tslint results files"
     }
   ],
   "execution": {
