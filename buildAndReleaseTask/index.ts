@@ -1,15 +1,13 @@
 import tl = require("azure-pipelines-task-lib/task");
-import * as fs from "fs";
+import { generateReportFile } from "./lib/tslint-html-report/index";
 
 async function run() {
   try {
-    const workDir: string = tl.getInput("workDir", true);
     const tslintResultFilePath: string = tl.getInput("filePath", true);
-    console.log("********", workDir, tslintResultFilePath, "*************");
-    const fileText = fs.readFileSync(`${workDir}/${tslintResultFilePath}`, {
-      encoding: "utf8"
-    });
-    console.log("File", fileText);
+    // console.log("********", workDir, tslintResultFilePath, "*************");
+
+    const reportFilePath = generateReportFile(tslintResultFilePath);
+    tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
   } catch (err) {
     tl.setResult(tl.TaskResult.Failed, err.message);
   }
