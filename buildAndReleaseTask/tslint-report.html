@@ -121,13 +121,12 @@
       <thead>
         <tr>
           <th data-sort="name">
-            Total errors:
-            <span class="badge badge-danger ml-2">{{ total }}</span>
+            total errors:
+            <span class="badge badge-danger ml-2">2</span>
           </th>
         </tr>
       </thead>
       <tbody>
-        {{#each files}}
         <tr>
           <td>
             <div>
@@ -139,29 +138,33 @@
                     alt=""
                   />
                   <strong>
-                    {{ name }}
+                    src/app.ts
                   </strong>
                 </div>
                 <div class="tag">
-                  {{#each errors}}
                   <a
-                    href="https://palantir.github.io/tslint/rules/{{
-                      ruleName
-                    }}/"
+                    href="https://palantir.github.io/tslint/rules/no-var-keyword/"
                     data-toggle="tooltip"
                     target="_blank"
                     data-placement="top"
-                    title="{{ failure }}"
+                    title="Forbidden &#x27;var&#x27; keyword, use &#x27;let&#x27; or &#x27;const&#x27; instead"
                   >
-                    <span class="badge badge-danger">{{ ruleName }}</span>
+                    <span class="badge badge-danger">no-var-keyword</span>
                   </a>
-                  {{/each}}
+                  <a
+                    href="https://palantir.github.io/tslint/rules/prefer-const/"
+                    data-toggle="tooltip"
+                    target="_blank"
+                    data-placement="top"
+                    title="Identifier &#x27;app&#x27; is never reassigned; use &#x27;const&#x27; instead of &#x27;var&#x27;."
+                  >
+                    <span class="badge badge-danger">prefer-const</span>
+                  </a>
                 </div>
               </div>
             </div>
           </td>
         </tr>
-        {{/each}}
       </tbody>
     </table>
   </div>
