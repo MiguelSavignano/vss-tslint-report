@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as handlebars from "handlebars";
+import { error } from "azure-pipelines-task-lib";
 // const tslintjson = require("./tslint-result.json");
 
 export interface ILinterReport {
@@ -23,11 +24,37 @@ export interface ILinterReport {
     position: number;
   };
 }
+interface IReportFile {
+  name: string;
+  errors: ILinterReport[];
+}
 
 interface IReportResult {
   total: number;
-  errors: ILinterReport[];
+  files: IReportFile[];
 }
+
+export const errosByFile = (jsonReport: ILinterReport[]): IReportFile[] => {
+  return jsonReport.reduce((memo, rule) => {
+    const lastElement = memo.find(it => it.name == rule.name);
+    if (lastElement) {
+      lastElement.errors = [...lastElement.errors, rule];
+    } else {
+      memo.push({
+        name: rule.name,
+        errors: [rule]
+      });
+    }
+
+    return memo;
+  }, []);
+};
+
+export const renderHtml = (data: IReportResult) => {
+  const template = fs.readFileSync(__dirname + "/report-template.html", "utf8");
+  const compiledTemplate = handlebars.compile(template, {});
+  return compiledTemplate(data);
+};
 
 export const generateReport = (jsonReport: ILinterReport[]): IReportResult => {
   const errors = jsonReport.map(report => {
@@ -38,34 +65,8 @@ export const generateReport = (jsonReport: ILinterReport[]): IReportResult => {
   });
   return {
     total: errors.length,
-    errors
+    files: errosByFile(jsonReport)
   };
-};
-
-export const renderHtml = (data: {
-  total: number;
-  errors: ILinterReport[];
-}) => {
-  const template = fs.readFileSync(__dirname + "/report-template.html", "utf8");
-  const compiledTemplate = handlebars.compile(template, {});
-  return compiledTemplate(data);
-};
-
-export const errosByFile = (jsonReport: ILinterReport[]) => {
-  return jsonReport.reduce((memo, result) => {
-    const { name } = result;
-    const lastElement = memo.find(it => it.name == name);
-    if (lastElement) {
-      lastElement.errors = lastElement.errors ? lastElement.errors + 1 : 1;
-    } else {
-      memo.push({
-        name,
-        errors: 1
-      });
-    }
-
-    return memo;
-  }, []);
 };
 
 export const generateReportFile = (
@@ -76,6 +77,7 @@ export const generateReportFile = (
   const tslintReport = JSON.parse(fileText);
 
   const report = generateReport(tslintReport);
+  console.log(report.files[0].errors);
   const contentReport = renderHtml(report);
   fs.writeFileSync(path, contentReport);
   return path;
@@ -83,6 +85,9 @@ export const generateReportFile = (
 
 generateReportFile(__dirname + "/tslint-result.json", "tslint-report.html");
 
+// const tslintjson = require("./tslint-result.json");
+
+// console.log(JSON.stringify(errosByFile(tslintjson)));
 // const report = generateReport(tslintjson);
 
 // console.log(renderHtml(report));

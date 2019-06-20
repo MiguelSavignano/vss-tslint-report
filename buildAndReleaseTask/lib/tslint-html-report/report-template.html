@@ -121,11 +121,13 @@
       <thead>
         <tr>
           <th data-sort="name">
-            total errors: <span class="badge badge-danger ml-2">9</span>
+            Total errors:
+            <span class="badge badge-danger ml-2">{{ total }}</span>
           </th>
         </tr>
       </thead>
       <tbody>
+        {{#each files}}
         <tr>
           <td>
             <div>
@@ -137,77 +139,29 @@
                     alt=""
                   />
                   <strong>
-                    /src/app.ts#7
+                    {{ name }}
                   </strong>
                 </div>
                 <div class="tag">
+                  {{#each errors}}
                   <a
-                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
+                    href="https://palantir.github.io/tslint/rules/{{
+                      ruleName
+                    }}/"
                     data-toggle="tooltip"
                     target="_blank"
                     data-placement="top"
-                    title="Forbidden 'var' keyword, use 'let' or 'const' instead"
+                    title="{{ failure }}"
                   >
-                    <span class="badge badge-danger">no-var-keyword</span>
+                    <span class="badge badge-danger">{{ ruleName }}</span>
                   </a>
-                  <a
-                    target="_blank"
-                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
-                  >
-                    <span class="badge badge-danger">no-var-keyword</span>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
-                  >
-                    <span class="badge badge-danger">no-var-keyword</span>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
-                  >
-                    <span class="badge badge-danger">no-var-keyword</span>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
-                  >
-                    <span class="badge badge-danger">no-var-keyword</span>
-                  </a>
+                  {{/each}}
                 </div>
               </div>
             </div>
           </td>
         </tr>
-        <tr>
-          <td>
-            <a
-              href="http://www.csshint.com/21-amazing-modern-photoshop-text-effects-tutorials/"
-              target="_blank"
-              >21+ Amazing Modern Photoshop Text Effects Tutorials</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <a
-              href="http://www.csshint.com/breadcrumb-css-snippets/"
-              target="_blank"
-              >18+ Free Breadcrumb CSS Snippets For your next Projects</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <a
-              href="http://www.csshint.com/beautiful-css3-buttons/"
-              target="_blank"
-              >Beautiful css3 buttons with hover effects</a
-            >
-          </td>
-        </tr>
+        {{/each}}
       </tbody>
     </table>
   </div>

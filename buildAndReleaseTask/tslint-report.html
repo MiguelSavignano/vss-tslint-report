@@ -1,17 +1,19 @@
 <html>
-  <link
-    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    rel="stylesheet"
-    id="bootstrap-css"
-  />
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!------ Include the above in your HEAD tag ---------->
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
   <style>
     @import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
 
     body {
-      background-color: #4fc3f7;
+      background-color: #159957;
+      background-image: linear-gradient(120deg, #155799, #159957);
       overflow: hidden;
       font-family: "Raleway", sans-serif;
     }
@@ -56,7 +58,7 @@
       background-color: rgba(0, 0, 0, 0.02);
     }
 
-    .table.table-striped tbody tr td a {
+    .table.table-striped tbody tr td {
       color: #3c2f17;
       font-size: 15px;
       text-decoration: none;
@@ -84,59 +86,106 @@
       color: #fff;
     }
   </style>
+
+  <style>
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .link-item img {
+      margin-right: 5px;
+    }
+    .link-item strong {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+    }
+    .link-item > div:first-child {
+      margin-right: 20px;
+    }
+    .title {
+      color: #efefef;
+      font-weight: 600;
+    }
+  </style>
   <div class="main-wrap">
+    <h1 class="title">
+      <img
+        height="65px"
+        src="https://2.bp.blogspot.com/-w7oeP1geosE/V82a740bTbI/AAAAAAAAAu4/-zJxZsmmH6garbdmUplX0n5Yz5zDsvcVQCLcB/s1600/tslint.png"
+        alt=""
+      />
+      TSLint Report
+    </h1>
     <table class="table table-striped">
       <thead>
         <tr>
-          <th data-sort="name">TSlint total errors: 120</th>
+          <th data-sort="name">
+            total errors:
+            <span class="badge badge-danger ml-2">2</span>
+          </th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <a
-              href="https://palantir.github.io/tslint/rules/no-var-keyword/"
-              target="_blank"
-            >
-              <div>
-                /src/app.ts#7
+            <div>
+              <div class="link-item">
+                <div>
+                  <img
+                    height="30px"
+                    src="https://cdn.worldvectorlogo.com/logos/typescript.svg"
+                    alt=""
+                  />
+                  <strong>
+                    src/app.ts
+                  </strong>
+                </div>
+                <div class="tag">
+                  <a
+                    href="https://palantir.github.io/tslint/rules/no-var-keyword/"
+                    data-toggle="tooltip"
+                    target="_blank"
+                    data-placement="top"
+                    title="Forbidden &#x27;var&#x27; keyword, use &#x27;let&#x27; or &#x27;const&#x27; instead"
+                  >
+                    <span class="badge badge-danger">no-var-keyword</span>
+                  </a>
+                  <a
+                    href="https://palantir.github.io/tslint/rules/prefer-const/"
+                    data-toggle="tooltip"
+                    target="_blank"
+                    data-placement="top"
+                    title="Identifier &#x27;app&#x27; is never reassigned; use &#x27;const&#x27; instead of &#x27;var&#x27;."
+                  >
+                    <span class="badge badge-danger">prefer-const</span>
+                  </a>
+                </div>
               </div>
-              <div class="tag">
-                no-var-keyword
-              </div>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              href="http://www.csshint.com/21-amazing-modern-photoshop-text-effects-tutorials/"
-              target="_blank"
-              >21+ Amazing Modern Photoshop Text Effects Tutorials</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <a
-              href="http://www.csshint.com/breadcrumb-css-snippets/"
-              target="_blank"
-              >18+ Free Breadcrumb CSS Snippets For your next Projects</a
-            >
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <a
-              href="http://www.csshint.com/beautiful-css3-buttons/"
-              target="_blank"
-              >Beautiful css3 buttons with hover effects</a
-            >
+            </div>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
 </html>
