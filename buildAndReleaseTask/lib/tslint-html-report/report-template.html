@@ -1,55 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      type="text/css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
-    <title>TSLint Report</title>
-    <style>
-      .badge-success {
-        background-color: green;
-      }
-
-      .badge-error {
-        background-color: red;
-      }
-      .error-div span {
-        padding: 10px;
-      }
-    </style>
   </head>
 
-  <body>
-    <div class="container">
-      <h1 class="text-center">TSLint Error Report</h1>
-      <p>
-        Total Lint Errors: <span class="badge badge-error">{{ total }}</span>
-      </p>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
 
-      <div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">File</th>
-              <th scope="col">Rule name</th>
-            </tr>
-          </thead>
-          <tbody>
-          {{#each errors as |error|}}
-            <tr>
-              <td>{{ error.name }}</td>
-              <td>{{ error.ruleName }}</td>
-            </tr>
-          {{/each}}
-          </tbody>
-        </table>
-        </div>
-      </div>
-    </div>
-  </body>
+    body {
+      background-color: #159957;
+      background-image: linear-gradient(120deg, #155799, #159957);
+      overflow: hidden;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .main-wrap {
+      padding: 3%;
+      max-width: 1200px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .table.table-striped {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+      -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+      -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .table.table-striped thead {
+      background: #fff;
+      box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .table.table-striped th {
+      padding: 0.9rem 0.5rem;
+      font-weight: bold;
+      border: 1px solid #efefef;
+      text-align: left;
+      border-top: 0px;
+    }
+
+    .table.table-striped tbody tr:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .table.table-striped tbody tr td {
+      color: #3c2f17;
+      font-size: 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .table.table-striped tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    .table.table-striped tbody tr td {
+      border: 1px solid #efefef;
+      padding: 0.7rem;
+      text-align: left;
+      border-top: 0px;
+    }
+
+    .ftr {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .ftr a {
+      color: #fff;
+    }
+  </style>
+
+  <style>
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .link-item img {
+      margin-right: 5px;
+    }
+    .link-item strong {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+    }
+    .link-item > div:first-child {
+      margin-right: 20px;
+    }
+    .title {
+      color: #efefef;
+      font-weight: 600;
+    }
+  </style>
+  <div class="main-wrap">
+    <h1 class="title">
+      <img
+        height="65px"
+        src="https://2.bp.blogspot.com/-w7oeP1geosE/V82a740bTbI/AAAAAAAAAu4/-zJxZsmmH6garbdmUplX0n5Yz5zDsvcVQCLcB/s1600/tslint.png"
+        alt=""
+      />
+      TSLint Report
+    </h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th data-sort="name">
+            total errors: <span class="badge badge-danger ml-2">9</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div>
+              <div class="link-item">
+                <div>
+                  <img
+                    height="30px"
+                    src="https://cdn.worldvectorlogo.com/logos/typescript.svg"
+                    alt=""
+                  />
+                  <strong>
+                    /src/app.ts#7
+                  </strong>
+                </div>
+                <div class="tag">
+                  <a
+                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
+                    data-toggle="tooltip"
+                    target="_blank"
+                    data-placement="top"
+                    title="Forbidden 'var' keyword, use 'let' or 'const' instead"
+                  >
+                    <span class="badge badge-danger">no-var-keyword</span>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
+                  >
+                    <span class="badge badge-danger">no-var-keyword</span>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
+                  >
+                    <span class="badge badge-danger">no-var-keyword</span>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
+                  >
+                    <span class="badge badge-danger">no-var-keyword</span>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://palantir.github.io/tslint/rules/no-var-requires/"
+                  >
+                    <span class="badge badge-danger">no-var-keyword</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="http://www.csshint.com/21-amazing-modern-photoshop-text-effects-tutorials/"
+              target="_blank"
+              >21+ Amazing Modern Photoshop Text Effects Tutorials</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a
+              href="http://www.csshint.com/breadcrumb-css-snippets/"
+              target="_blank"
+              >18+ Free Breadcrumb CSS Snippets For your next Projects</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a
+              href="http://www.csshint.com/beautiful-css3-buttons/"
+              target="_blank"
+              >Beautiful css3 buttons with hover effects</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
 </html>

@@ -68,9 +68,10 @@ export const errosByFile = (jsonReport: ILinterReport[]) => {
   }, []);
 };
 
-export const generateReportFile = (tslintResultFilePath: string) => {
-  const path = "/tmp/tslint-report.html";
-
+export const generateReportFile = (
+  tslintResultFilePath: string,
+  path = "/tmp/tslint-report.html"
+) => {
   const fileText = fs.readFileSync(`${tslintResultFilePath}`, "utf8");
   const tslintReport = JSON.parse(fileText);
 
@@ -80,7 +81,7 @@ export const generateReportFile = (tslintResultFilePath: string) => {
   return path;
 };
 
-// generateReportFile(__dirname + "/tslint-result.json");
+generateReportFile(__dirname + "/tslint-result.json", "tslint-report.html");
 
 // const report = generateReport(tslintjson);
 
