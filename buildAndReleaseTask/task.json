@@ -14,14 +14,6 @@
   "instanceNameFormat": "TSlint report",
   "inputs": [
     {
-      "name": "workDir",
-      "type": "string",
-      "label": "Working folder that contains package.json",
-      "defaultValue": "./",
-      "required": true,
-      "helpMarkDown": "Working folder that contains package.json"
-    },
-    {
       "name": "filePath",
       "type": "string",
       "label": "TSlint result file",
