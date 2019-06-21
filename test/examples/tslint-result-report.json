@@ -183,39 +183,264 @@
     ],
     "errorsCount": [
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "curly",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "no-console",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "no-var-keyword",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 2
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "only-arrow-functions",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "prefer-const",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 16
       },
       {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
         "ruleName": "trailing-comma",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        },
         "count": 2
       }
     ]
@@ -247,7 +472,25 @@
     ],
     "errorsCount": [
       {
+        "endPosition": {
+          "character": 46,
+          "line": 0,
+          "position": 46
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 21,
+          "innerLength": 25,
+          "innerText": "\"../database/models/post\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
         "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 21,
+          "line": 0,
+          "position": 21
+        },
         "count": 5
       }
     ]
@@ -323,15 +566,69 @@
     ],
     "errorsCount": [
       {
+        "endPosition": {
+          "character": 13,
+          "line": 14,
+          "position": 217
+        },
+        "failure": "The class method 'index' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 206,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
         "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 14,
+          "position": 212
+        },
         "count": 5
       },
       {
+        "endPosition": {
+          "character": 13,
+          "line": 14,
+          "position": 217
+        },
+        "failure": "The class method 'index' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 206,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
         "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 14,
+          "position": 212
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 13,
+          "line": 14,
+          "position": 217
+        },
+        "failure": "The class method 'index' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 206,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
         "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 14,
+          "position": 212
+        },
         "count": 13
       }
     ]
@@ -402,15 +699,54 @@
     ],
     "errorsCount": [
       {
+        "endPosition": {
+          "character": 11,
+          "line": 21,
+          "position": 440
+        },
+        "failure": "The key 'content' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
         "ruleName": "object-literal-sort-keys",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 21,
+          "position": 433
+        },
         "count": 3
       },
       {
+        "endPosition": {
+          "character": 11,
+          "line": 21,
+          "position": 440
+        },
+        "failure": "The key 'content' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
         "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 21,
+          "position": 433
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 11,
+          "line": 21,
+          "position": 440
+        },
+        "failure": "The key 'content' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
         "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 21,
+          "position": 433
+        },
         "count": 3
       }
     ]
@@ -458,11 +794,37 @@
     ],
     "errorsCount": [
       {
+        "endPosition": {
+          "character": 55,
+          "line": 3,
+          "position": 146
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/database/sequelize.ts",
         "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 3,
+          "position": 106
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 55,
+          "line": 3,
+          "position": 146
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/database/sequelize.ts",
         "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 3,
+          "position": 106
+        },
         "count": 3
       }
     ]
@@ -526,15 +888,54 @@
     ],
     "errorsCount": [
       {
+        "endPosition": {
+          "character": 13,
+          "line": 8,
+          "position": 243
+        },
+        "failure": "Calls to 'console.log' are not allowed.",
+        "name": "src/index.ts",
         "ruleName": "no-console",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 8,
+          "position": 232
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 13,
+          "line": 8,
+          "position": 243
+        },
+        "failure": "Calls to 'console.log' are not allowed.",
+        "name": "src/index.ts",
         "ruleName": "only-arrow-functions",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 8,
+          "position": 232
+        },
         "count": 1
       },
       {
+        "endPosition": {
+          "character": 13,
+          "line": 8,
+          "position": 243
+        },
+        "failure": "Calls to 'console.log' are not allowed.",
+        "name": "src/index.ts",
         "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 8,
+          "position": 232
+        },
         "count": 2
       }
     ]

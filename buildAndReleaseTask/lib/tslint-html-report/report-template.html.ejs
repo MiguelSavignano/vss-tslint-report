@@ -122,12 +122,12 @@
         <tr>
           <th data-sort="name">
             Total errors:
-            <span class="badge badge-danger ml-2">{{ total }}</span>
+            <span class="badge badge-danger ml-2"> <%= total %> </span>
           </th>
         </tr>
       </thead>
       <tbody>
-        {{#each files}}
+        <% files.forEach(function(file){ %>
         <tr>
           <td>
             <div>
@@ -139,29 +139,30 @@
                     alt=""
                   />
                   <strong>
-                    {{ name }}
+                    <%= file.name %>
                   </strong>
                 </div>
                 <div class="tag">
-                  {{#each errors}}
+                  <% file.errorsCount.forEach(function(error){ %>
                   <a
-                    href="https://palantir.github.io/tslint/rules/{{
-                      ruleName
-                    }}/"
+                    href="https://palantir.github.io/tslint/rules/<%= error.ruleName %>/"
                     data-toggle="tooltip"
                     target="_blank"
                     data-placement="top"
-                    title="{{ failure }}"
+                    title="<%= error.failure %>"
                   >
-                    <span class="badge badge-danger">{{ ruleName }}</span>
+                    <span class="badge badge-danger">
+                      <%= error.count >= 1 ? error.count : '' %> <%=
+                      error.ruleName %>
+                    </span>
                   </a>
-                  {{/each}}
+                  <% }); %>
                 </div>
               </div>
             </div>
           </td>
         </tr>
-        {{/each}}
+        <% }); %>
       </tbody>
     </table>
   </div>
