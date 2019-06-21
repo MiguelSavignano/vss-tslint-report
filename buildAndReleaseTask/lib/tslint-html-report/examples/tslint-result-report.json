@@ -1,0 +1,542 @@
+[
+  {
+    "name": "src/app.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
+        "ruleName": "curly",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        }
+      },
+      {
+        "endPosition": {
+          "character": 15,
+          "line": 44,
+          "position": 1141
+        },
+        "failure": "Calls to 'console.error' are not allowed.",
+        "name": "src/app.ts",
+        "ruleName": "no-console",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 44,
+          "position": 1128
+        }
+      },
+      {
+        "endPosition": {
+          "character": 3,
+          "line": 7,
+          "position": 294
+        },
+        "failure": "Forbidden 'var' keyword, use 'let' or 'const' instead",
+        "fix": {
+          "innerStart": 291,
+          "innerLength": 3,
+          "innerText": "let"
+        },
+        "name": "src/app.ts",
+        "ruleName": "no-var-keyword",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 0,
+          "line": 7,
+          "position": 291
+        }
+      },
+      {
+        "endPosition": {
+          "character": 47,
+          "line": 4,
+          "position": 236
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/app.ts",
+        "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 18,
+          "line": 4,
+          "position": 207
+        }
+      },
+      {
+        "endPosition": {
+          "character": 16,
+          "line": 43,
+          "position": 1102
+        },
+        "failure": "non-arrow functions are forbidden",
+        "name": "src/app.ts",
+        "ruleName": "only-arrow-functions",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 43,
+          "position": 1094
+        }
+      },
+      {
+        "endPosition": {
+          "character": 41,
+          "line": 2,
+          "position": 123
+        },
+        "failure": "Import sources within a group must be alphabetized.",
+        "fix": [
+          {
+            "innerStart": 0,
+            "innerLength": 189,
+            "innerText": "import * as express from 'express';\nimport { Server } from 'typescript-rest';\nimport { PostsController } from './controllers/PostsController';\nimport sequelize from './database/sequelize';\n"
+          }
+        ],
+        "name": "src/app.ts",
+        "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 0,
+          "line": 2,
+          "position": 82
+        }
+      },
+      {
+        "endPosition": {
+          "character": 7,
+          "line": 7,
+          "position": 298
+        },
+        "failure": "Identifier 'app' is never reassigned; use 'const' instead of 'var'.",
+        "name": "src/app.ts",
+        "ruleName": "prefer-const",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 7,
+          "position": 295
+        }
+      },
+      {
+        "endPosition": {
+          "character": 34,
+          "line": 0,
+          "position": 34
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 25,
+          "innerLength": 9,
+          "innerText": "\"express\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 25,
+          "line": 0,
+          "position": 25
+        }
+      },
+      {
+        "endPosition": {
+          "character": 6,
+          "line": 12,
+          "position": 417
+        },
+        "failure": "Missing trailing comma",
+        "fix": {
+          "innerStart": 417,
+          "innerLength": 0,
+          "innerText": ","
+        },
+        "name": "src/app.ts",
+        "ruleName": "trailing-comma",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 6,
+          "line": 12,
+          "position": 417
+        }
+      }
+    ],
+    "errorsCount": [
+      {
+        "ruleName": "curly",
+        "count": 1
+      },
+      {
+        "ruleName": "no-console",
+        "count": 1
+      },
+      {
+        "ruleName": "no-var-keyword",
+        "count": 1
+      },
+      {
+        "ruleName": "no-var-requires",
+        "count": 2
+      },
+      {
+        "ruleName": "only-arrow-functions",
+        "count": 1
+      },
+      {
+        "ruleName": "ordered-imports",
+        "count": 1
+      },
+      {
+        "ruleName": "prefer-const",
+        "count": 1
+      },
+      {
+        "ruleName": "quotemark",
+        "count": 16
+      },
+      {
+        "ruleName": "trailing-comma",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "name": "src/controllers/PostsController.spec.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 46,
+          "line": 0,
+          "position": 46
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 21,
+          "innerLength": 25,
+          "innerText": "\"../database/models/post\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 21,
+          "line": 0,
+          "position": 21
+        }
+      }
+    ],
+    "errorsCount": [
+      {
+        "ruleName": "quotemark",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "src/controllers/PostsController.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 14,
+          "position": 217
+        },
+        "failure": "The class method 'index' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 206,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 14,
+          "position": 212
+        }
+      },
+      {
+        "endPosition": {
+          "character": 5,
+          "line": 2,
+          "position": 22
+        },
+        "failure": "Named imports must be alphabetized.",
+        "fix": [
+          {
+            "innerStart": 0,
+            "innerLength": 149,
+            "innerText": "import {\n  DELETE,\n  FormParam,\n  GET,\n  Path,\n  PathParam,\n  POST,\n  PUT,\n} from 'typescript-rest';\nimport { Post } from '../database/models/post';\n"
+          }
+        ],
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 1,
+          "position": 11
+        }
+      },
+      {
+        "endPosition": {
+          "character": 24,
+          "line": 8,
+          "position": 99
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 82,
+          "innerLength": 17,
+          "innerText": "\"typescript-rest\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 7,
+          "line": 8,
+          "position": 82
+        }
+      }
+    ],
+    "errorsCount": [
+      {
+        "ruleName": "member-access",
+        "count": 5
+      },
+      {
+        "ruleName": "ordered-imports",
+        "count": 1
+      },
+      {
+        "ruleName": "quotemark",
+        "count": 13
+      }
+    ]
+  },
+  {
+    "name": "src/database/models/post.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 11,
+          "line": 21,
+          "position": 440
+        },
+        "failure": "The key 'content' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
+        "ruleName": "object-literal-sort-keys",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 21,
+          "position": 433
+        }
+      },
+      {
+        "endPosition": {
+          "character": 25,
+          "line": 0,
+          "position": 25
+        },
+        "failure": "Named imports must be alphabetized.",
+        "fix": [
+          {
+            "innerStart": 0,
+            "innerLength": 84,
+            "innerText": "import { DataTypes, Model } from 'sequelize';\nimport sequelize from '../sequelize';\n"
+          }
+        ],
+        "name": "src/database/models/post.ts",
+        "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 9,
+          "line": 0,
+          "position": 9
+        }
+      },
+      {
+        "endPosition": {
+          "character": 44,
+          "line": 0,
+          "position": 44
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 33,
+          "innerLength": 11,
+          "innerText": "\"sequelize\""
+        },
+        "name": "src/database/models/post.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 33,
+          "line": 0,
+          "position": 33
+        }
+      }
+    ],
+    "errorsCount": [
+      {
+        "ruleName": "object-literal-sort-keys",
+        "count": 3
+      },
+      {
+        "ruleName": "ordered-imports",
+        "count": 1
+      },
+      {
+        "ruleName": "quotemark",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "name": "src/database/sequelize.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 55,
+          "line": 3,
+          "position": 146
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/database/sequelize.ts",
+        "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 3,
+          "position": 106
+        }
+      },
+      {
+        "endPosition": {
+          "character": 37,
+          "line": 0,
+          "position": 37
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 26,
+          "innerLength": 11,
+          "innerText": "\"sequelize\""
+        },
+        "name": "src/database/sequelize.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 26,
+          "line": 0,
+          "position": 26
+        }
+      }
+    ],
+    "errorsCount": [
+      {
+        "ruleName": "no-var-requires",
+        "count": 1
+      },
+      {
+        "ruleName": "quotemark",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "name": "src/index.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 8,
+          "position": 243
+        },
+        "failure": "Calls to 'console.log' are not allowed.",
+        "name": "src/index.ts",
+        "ruleName": "no-console",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 8,
+          "position": 232
+        }
+      },
+      {
+        "endPosition": {
+          "character": 25,
+          "line": 7,
+          "position": 225
+        },
+        "failure": "non-arrow functions are forbidden",
+        "name": "src/index.ts",
+        "ruleName": "only-arrow-functions",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 17,
+          "line": 7,
+          "position": 217
+        }
+      },
+      {
+        "endPosition": {
+          "character": 50,
+          "line": 0,
+          "position": 50
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 29,
+          "innerLength": 21,
+          "innerText": "\"applicationinsights\""
+        },
+        "name": "src/index.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 29,
+          "line": 0,
+          "position": 29
+        }
+      }
+    ],
+    "errorsCount": [
+      {
+        "ruleName": "no-console",
+        "count": 1
+      },
+      {
+        "ruleName": "only-arrow-functions",
+        "count": 1
+      },
+      {
+        "ruleName": "quotemark",
+        "count": 2
+      }
+    ]
+  }
+]

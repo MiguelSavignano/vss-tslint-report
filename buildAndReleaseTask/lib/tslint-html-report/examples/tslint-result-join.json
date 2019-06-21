@@ -1,0 +1,1355 @@
+[
+  {
+    "name": "src/app.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 44,
+          "line": 45,
+          "position": 1200
+        },
+        "failure": "if statements must be braced",
+        "fix": [
+          {
+            "innerStart": 1178,
+            "innerLength": 0,
+            "innerText": " {"
+          },
+          {
+            "innerStart": 1200,
+            "innerLength": 0,
+            "innerText": " }"
+          }
+        ],
+        "name": "src/app.ts",
+        "ruleName": "curly",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 45,
+          "position": 1158
+        }
+      },
+      {
+        "endPosition": {
+          "character": 15,
+          "line": 44,
+          "position": 1141
+        },
+        "failure": "Calls to 'console.error' are not allowed.",
+        "name": "src/app.ts",
+        "ruleName": "no-console",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 44,
+          "position": 1128
+        }
+      },
+      {
+        "endPosition": {
+          "character": 3,
+          "line": 7,
+          "position": 294
+        },
+        "failure": "Forbidden 'var' keyword, use 'let' or 'const' instead",
+        "fix": {
+          "innerStart": 291,
+          "innerLength": 3,
+          "innerText": "let"
+        },
+        "name": "src/app.ts",
+        "ruleName": "no-var-keyword",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 0,
+          "line": 7,
+          "position": 291
+        }
+      },
+      {
+        "endPosition": {
+          "character": 47,
+          "line": 4,
+          "position": 236
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/app.ts",
+        "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 18,
+          "line": 4,
+          "position": 207
+        }
+      },
+      {
+        "endPosition": {
+          "character": 50,
+          "line": 5,
+          "position": 288
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/app.ts",
+        "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 24,
+          "line": 5,
+          "position": 262
+        }
+      },
+      {
+        "endPosition": {
+          "character": 16,
+          "line": 43,
+          "position": 1102
+        },
+        "failure": "non-arrow functions are forbidden",
+        "name": "src/app.ts",
+        "ruleName": "only-arrow-functions",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 43,
+          "position": 1094
+        }
+      },
+      {
+        "endPosition": {
+          "character": 41,
+          "line": 2,
+          "position": 123
+        },
+        "failure": "Import sources within a group must be alphabetized.",
+        "fix": [
+          {
+            "innerStart": 0,
+            "innerLength": 189,
+            "innerText": "import * as express from 'express';\nimport { Server } from 'typescript-rest';\nimport { PostsController } from './controllers/PostsController';\nimport sequelize from './database/sequelize';\n"
+          }
+        ],
+        "name": "src/app.ts",
+        "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 0,
+          "line": 2,
+          "position": 82
+        }
+      },
+      {
+        "endPosition": {
+          "character": 7,
+          "line": 7,
+          "position": 298
+        },
+        "failure": "Identifier 'app' is never reassigned; use 'const' instead of 'var'.",
+        "name": "src/app.ts",
+        "ruleName": "prefer-const",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 7,
+          "position": 295
+        }
+      },
+      {
+        "endPosition": {
+          "character": 34,
+          "line": 0,
+          "position": 34
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 25,
+          "innerLength": 9,
+          "innerText": "\"express\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 25,
+          "line": 0,
+          "position": 25
+        }
+      },
+      {
+        "endPosition": {
+          "character": 44,
+          "line": 1,
+          "position": 80
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 58,
+          "innerLength": 22,
+          "innerText": "\"./database/sequelize\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 22,
+          "line": 1,
+          "position": 58
+        }
+      },
+      {
+        "endPosition": {
+          "character": 40,
+          "line": 2,
+          "position": 122
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 105,
+          "innerLength": 17,
+          "innerText": "\"typescript-rest\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 23,
+          "line": 2,
+          "position": 105
+        }
+      },
+      {
+        "endPosition": {
+          "character": 63,
+          "line": 3,
+          "position": 187
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 156,
+          "innerLength": 31,
+          "innerText": "\"./controllers/PostsController\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 32,
+          "line": 3,
+          "position": 156
+        }
+      },
+      {
+        "endPosition": {
+          "character": 46,
+          "line": 4,
+          "position": 235
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 215,
+          "innerLength": 20,
+          "innerText": "\"swagger-ui-express\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 26,
+          "line": 4,
+          "position": 215
+        }
+      },
+      {
+        "endPosition": {
+          "character": 49,
+          "line": 5,
+          "position": 287
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 270,
+          "innerLength": 17,
+          "innerText": "\"../swagger.json\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 32,
+          "line": 5,
+          "position": 270
+        }
+      },
+      {
+        "endPosition": {
+          "character": 42,
+          "line": 14,
+          "position": 467
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 438,
+          "innerLength": 29,
+          "innerText": "\"Access-Control-Allow-Origin\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 13,
+          "line": 14,
+          "position": 438
+        }
+      },
+      {
+        "endPosition": {
+          "character": 47,
+          "line": 14,
+          "position": 472
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 469,
+          "innerLength": 3,
+          "innerText": "\"*\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 44,
+          "line": 14,
+          "position": 469
+        }
+      },
+      {
+        "endPosition": {
+          "character": 43,
+          "line": 15,
+          "position": 518
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 488,
+          "innerLength": 30,
+          "innerText": "\"Access-Control-Allow-Methods\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 13,
+          "line": 15,
+          "position": 488
+        }
+      },
+      {
+        "endPosition": {
+          "character": 78,
+          "line": 15,
+          "position": 553
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 520,
+          "innerLength": 33,
+          "innerText": "\"GET, PUT, POST, DELETE, OPTIONS\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 45,
+          "line": 15,
+          "position": 520
+        }
+      },
+      {
+        "endPosition": {
+          "character": 34,
+          "line": 17,
+          "position": 604
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 574,
+          "innerLength": 30,
+          "innerText": "\"Access-Control-Allow-Headers\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 17,
+          "position": 574
+        }
+      },
+      {
+        "endPosition": {
+          "character": 67,
+          "line": 18,
+          "position": 673
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 610,
+          "innerLength": 63,
+          "innerText": "\"Content-Type, Authorization, Content-Length, X-Requested-With\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 18,
+          "position": 610
+        }
+      },
+      {
+        "endPosition": {
+          "character": 15,
+          "line": 21,
+          "position": 695
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 686,
+          "innerLength": 9,
+          "innerText": "\"OPTIONS\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 6,
+          "line": 21,
+          "position": 686
+        }
+      },
+      {
+        "endPosition": {
+          "character": 23,
+          "line": 32,
+          "position": 856
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 841,
+          "innerLength": 15,
+          "innerText": "\"/swagger-docs\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 32,
+          "position": 841
+        }
+      },
+      {
+        "endPosition": {
+          "character": 41,
+          "line": 34,
+          "position": 952
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 940,
+          "innerLength": 12,
+          "innerText": "\"production\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 29,
+          "line": 34,
+          "position": 940
+        }
+      },
+      {
+        "endPosition": {
+          "character": 14,
+          "line": 39,
+          "position": 1037
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 1031,
+          "innerLength": 6,
+          "innerText": "\"/app\""
+        },
+        "name": "src/app.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 39,
+          "position": 1031
+        }
+      },
+      {
+        "endPosition": {
+          "character": 6,
+          "line": 12,
+          "position": 417
+        },
+        "failure": "Missing trailing comma",
+        "fix": {
+          "innerStart": 417,
+          "innerLength": 0,
+          "innerText": ","
+        },
+        "name": "src/app.ts",
+        "ruleName": "trailing-comma",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 6,
+          "line": 12,
+          "position": 417
+        }
+      },
+      {
+        "endPosition": {
+          "character": 67,
+          "line": 18,
+          "position": 673
+        },
+        "failure": "Missing trailing comma",
+        "fix": {
+          "innerStart": 673,
+          "innerLength": 0,
+          "innerText": ","
+        },
+        "name": "src/app.ts",
+        "ruleName": "trailing-comma",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 67,
+          "line": 18,
+          "position": 673
+        }
+      }
+    ]
+  },
+  {
+    "name": "src/controllers/PostsController.spec.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 46,
+          "line": 0,
+          "position": 46
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 21,
+          "innerLength": 25,
+          "innerText": "\"../database/models/post\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 21,
+          "line": 0,
+          "position": 21
+        }
+      },
+      {
+        "endPosition": {
+          "character": 51,
+          "line": 1,
+          "position": 99
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 80,
+          "innerLength": 19,
+          "innerText": "\"./PostsController\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 32,
+          "line": 1,
+          "position": 80
+        }
+      },
+      {
+        "endPosition": {
+          "character": 26,
+          "line": 3,
+          "position": 128
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 111,
+          "innerLength": 17,
+          "innerText": "\"PostsController\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 9,
+          "line": 3,
+          "position": 111
+        }
+      },
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 4,
+          "position": 151
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 143,
+          "innerLength": 8,
+          "innerText": "\"#index\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 5,
+          "line": 4,
+          "position": 143
+        }
+      },
+      {
+        "endPosition": {
+          "character": 42,
+          "line": 5,
+          "position": 209
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 200,
+          "innerLength": 9,
+          "innerText": "\"findAll\""
+        },
+        "name": "src/controllers/PostsController.spec.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 33,
+          "line": 5,
+          "position": 200
+        }
+      }
+    ]
+  },
+  {
+    "name": "src/controllers/PostsController.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 14,
+          "position": 217
+        },
+        "failure": "The class method 'index' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 206,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 14,
+          "position": 212
+        }
+      },
+      {
+        "endPosition": {
+          "character": 12,
+          "line": 20,
+          "position": 288
+        },
+        "failure": "The class method 'show' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 278,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 20,
+          "position": 284
+        }
+      },
+      {
+        "endPosition": {
+          "character": 14,
+          "line": 25,
+          "position": 377
+        },
+        "failure": "The class method 'create' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 365,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 25,
+          "position": 371
+        }
+      },
+      {
+        "endPosition": {
+          "character": 15,
+          "line": 34,
+          "position": 553
+        },
+        "failure": "The class method 'updatte' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 540,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 34,
+          "position": 546
+        }
+      },
+      {
+        "endPosition": {
+          "character": 15,
+          "line": 44,
+          "position": 784
+        },
+        "failure": "The class method 'destroy' must be marked either 'private', 'public', or 'protected'",
+        "fix": {
+          "innerStart": 771,
+          "innerLength": 0,
+          "innerText": "public "
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "member-access",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 44,
+          "position": 777
+        }
+      },
+      {
+        "endPosition": {
+          "character": 5,
+          "line": 2,
+          "position": 22
+        },
+        "failure": "Named imports must be alphabetized.",
+        "fix": [
+          {
+            "innerStart": 0,
+            "innerLength": 149,
+            "innerText": "import {\n  DELETE,\n  FormParam,\n  GET,\n  Path,\n  PathParam,\n  POST,\n  PUT,\n} from 'typescript-rest';\nimport { Post } from '../database/models/post';\n"
+          }
+        ],
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 1,
+          "position": 11
+        }
+      },
+      {
+        "endPosition": {
+          "character": 24,
+          "line": 8,
+          "position": 99
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 82,
+          "innerLength": 17,
+          "innerText": "\"typescript-rest\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 7,
+          "line": 8,
+          "position": 82
+        }
+      },
+      {
+        "endPosition": {
+          "character": 46,
+          "line": 9,
+          "position": 147
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 122,
+          "innerLength": 25,
+          "innerText": "\"../database/models/post\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 21,
+          "line": 9,
+          "position": 122
+        }
+      },
+      {
+        "endPosition": {
+          "character": 14,
+          "line": 11,
+          "position": 164
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 156,
+          "innerLength": 8,
+          "innerText": "\"/posts\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 6,
+          "line": 11,
+          "position": 156
+        }
+      },
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 18,
+          "position": 267
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 262,
+          "innerLength": 5,
+          "innerText": "\":id\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 18,
+          "position": 262
+        }
+      },
+      {
+        "endPosition": {
+          "character": 28,
+          "line": 20,
+          "position": 304
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 300,
+          "innerLength": 4,
+          "innerText": "\"id\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 24,
+          "line": 20,
+          "position": 300
+        }
+      },
+      {
+        "endPosition": {
+          "character": 22,
+          "line": 26,
+          "position": 401
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 394,
+          "innerLength": 7,
+          "innerText": "\"title\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 26,
+          "position": 394
+        }
+      },
+      {
+        "endPosition": {
+          "character": 24,
+          "line": 27,
+          "position": 442
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 433,
+          "innerLength": 9,
+          "innerText": "\"content\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 27,
+          "position": 433
+        }
+      },
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 32,
+          "position": 529
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 524,
+          "innerLength": 5,
+          "innerText": "\":id\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 32,
+          "position": 524
+        }
+      },
+      {
+        "endPosition": {
+          "character": 19,
+          "line": 35,
+          "position": 574
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 570,
+          "innerLength": 4,
+          "innerText": "\"id\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 35,
+          "position": 570
+        }
+      },
+      {
+        "endPosition": {
+          "character": 22,
+          "line": 36,
+          "position": 610
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 603,
+          "innerLength": 7,
+          "innerText": "\"title\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 36,
+          "position": 603
+        }
+      },
+      {
+        "endPosition": {
+          "character": 24,
+          "line": 37,
+          "position": 651
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 642,
+          "innerLength": 9,
+          "innerText": "\"content\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 37,
+          "position": 642
+        }
+      },
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 42,
+          "position": 757
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 752,
+          "innerLength": 5,
+          "innerText": "\":id\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 8,
+          "line": 42,
+          "position": 752
+        }
+      },
+      {
+        "endPosition": {
+          "character": 31,
+          "line": 44,
+          "position": 800
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 796,
+          "innerLength": 4,
+          "innerText": "\"id\""
+        },
+        "name": "src/controllers/PostsController.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 27,
+          "line": 44,
+          "position": 796
+        }
+      }
+    ]
+  },
+  {
+    "name": "src/database/models/post.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 11,
+          "line": 21,
+          "position": 440
+        },
+        "failure": "The key 'content' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
+        "ruleName": "object-literal-sort-keys",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 4,
+          "line": 21,
+          "position": 433
+        }
+      },
+      {
+        "endPosition": {
+          "character": 16,
+          "line": 17,
+          "position": 358
+        },
+        "failure": "The key 'primaryKey' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
+        "ruleName": "object-literal-sort-keys",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 6,
+          "line": 17,
+          "position": 348
+        }
+      },
+      {
+        "endPosition": {
+          "character": 15,
+          "line": 23,
+          "position": 487
+        },
+        "failure": "The key 'allowNull' is not sorted alphabetically",
+        "name": "src/database/models/post.ts",
+        "ruleName": "object-literal-sort-keys",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 6,
+          "line": 23,
+          "position": 478
+        }
+      },
+      {
+        "endPosition": {
+          "character": 25,
+          "line": 0,
+          "position": 25
+        },
+        "failure": "Named imports must be alphabetized.",
+        "fix": [
+          {
+            "innerStart": 0,
+            "innerLength": 84,
+            "innerText": "import { DataTypes, Model } from 'sequelize';\nimport sequelize from '../sequelize';\n"
+          }
+        ],
+        "name": "src/database/models/post.ts",
+        "ruleName": "ordered-imports",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 9,
+          "line": 0,
+          "position": 9
+        }
+      },
+      {
+        "endPosition": {
+          "character": 44,
+          "line": 0,
+          "position": 44
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 33,
+          "innerLength": 11,
+          "innerText": "\"sequelize\""
+        },
+        "name": "src/database/models/post.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 33,
+          "line": 0,
+          "position": 33
+        }
+      },
+      {
+        "endPosition": {
+          "character": 36,
+          "line": 1,
+          "position": 82
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 68,
+          "innerLength": 14,
+          "innerText": "\"../sequelize\""
+        },
+        "name": "src/database/models/post.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 22,
+          "line": 1,
+          "position": 68
+        }
+      },
+      {
+        "endPosition": {
+          "character": 22,
+          "line": 28,
+          "position": 549
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 542,
+          "innerLength": 7,
+          "innerText": "\"posts\""
+        },
+        "name": "src/database/models/post.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 28,
+          "position": 542
+        }
+      }
+    ]
+  },
+  {
+    "name": "src/database/sequelize.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 55,
+          "line": 3,
+          "position": 146
+        },
+        "failure": "require statement not part of an import statement",
+        "name": "src/database/sequelize.ts",
+        "ruleName": "no-var-requires",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 15,
+          "line": 3,
+          "position": 106
+        }
+      },
+      {
+        "endPosition": {
+          "character": 37,
+          "line": 0,
+          "position": 37
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 26,
+          "innerLength": 11,
+          "innerText": "\"sequelize\""
+        },
+        "name": "src/database/sequelize.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 26,
+          "line": 0,
+          "position": 26
+        }
+      },
+      {
+        "endPosition": {
+          "character": 49,
+          "line": 1,
+          "position": 88
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 75,
+          "innerLength": 13,
+          "innerText": "\"development\""
+        },
+        "name": "src/database/sequelize.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 36,
+          "line": 1,
+          "position": 75
+        }
+      },
+      {
+        "endPosition": {
+          "character": 54,
+          "line": 3,
+          "position": 145
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 126,
+          "innerLength": 19,
+          "innerText": "\"/config/config.js\""
+        },
+        "name": "src/database/sequelize.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 35,
+          "line": 3,
+          "position": 126
+        }
+      }
+    ]
+  },
+  {
+    "name": "src/index.ts",
+    "errors": [
+      {
+        "endPosition": {
+          "character": 13,
+          "line": 8,
+          "position": 243
+        },
+        "failure": "Calls to 'console.log' are not allowed.",
+        "name": "src/index.ts",
+        "ruleName": "no-console",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 2,
+          "line": 8,
+          "position": 232
+        }
+      },
+      {
+        "endPosition": {
+          "character": 25,
+          "line": 7,
+          "position": 225
+        },
+        "failure": "non-arrow functions are forbidden",
+        "name": "src/index.ts",
+        "ruleName": "only-arrow-functions",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 17,
+          "line": 7,
+          "position": 217
+        }
+      },
+      {
+        "endPosition": {
+          "character": 50,
+          "line": 0,
+          "position": 50
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 29,
+          "innerLength": 21,
+          "innerText": "\"applicationinsights\""
+        },
+        "name": "src/index.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 29,
+          "line": 0,
+          "position": 29
+        }
+      },
+      {
+        "endPosition": {
+          "character": 23,
+          "line": 4,
+          "position": 158
+        },
+        "failure": "' should be \"",
+        "fix": {
+          "innerStart": 151,
+          "innerLength": 7,
+          "innerText": "\"./app\""
+        },
+        "name": "src/index.ts",
+        "ruleName": "quotemark",
+        "ruleSeverity": "ERROR",
+        "startPosition": {
+          "character": 16,
+          "line": 4,
+          "position": 151
+        }
+      }
+    ]
+  }
+]

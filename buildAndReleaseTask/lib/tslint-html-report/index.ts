@@ -1,7 +1,6 @@
 import * as fs from "fs";
 import * as handlebars from "handlebars";
-import { error } from "azure-pipelines-task-lib";
-// const tslintjson = require("./tslint-result.json");
+import * as _ from "lodash";
 
 export interface ILinterReport {
   endPosition: {
@@ -50,6 +49,24 @@ export const errosByFile = (jsonReport: ILinterReport[]): IReportFile[] => {
   }, []);
 };
 
+export const mergeErrorCount = (jsonReportJoin: IReportFile[]) => {
+  return jsonReportJoin.map(it => {
+    const errors = _.uniqBy(it.errors, "ruleName");
+    const errorsNames = errors.map(it => it.ruleName);
+    const errorsCount = errorsNames.map(errorName => {
+      return {
+        ruleName: errorName,
+        count: _.filter(it.errors, ["ruleName", errorName]).length
+      };
+    });
+    return {
+      ...it,
+      errors,
+      errorsCount
+    };
+  });
+};
+
 export const renderHtml = (data: IReportResult) => {
   const template = fs.readFileSync(__dirname + "/report-template.html", "utf8");
   const compiledTemplate = handlebars.compile(template, {});
@@ -83,7 +100,7 @@ export const generateReportFile = (
   return path;
 };
 
-generateReportFile(__dirname + "/tslint-result.json", "tslint-report.html");
+// generateReportFile(__dirname + "/tslint-result.json", "tslint-report.html");
 
 // const tslintjson = require("./tslint-result.json");
 
