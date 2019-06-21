@@ -1,4 +1,7 @@
-import { errosByFile, joinErrors } from "./index";
+import {
+  errosByFile,
+  mergeErrorCount
+} from "../buildAndReleaseTask/lib/tslint-html-report";
 import * as fs from "fs";
 
 test("#errosByFile", () => {
@@ -15,7 +18,7 @@ test("#errosByFile", () => {
 test("#joinErrors", () => {
   const tslintjsonJoin = require("./examples/tslint-result-join.json");
 
-  const result = joinErrors(tslintjsonJoin);
+  const result = mergeErrorCount(tslintjsonJoin);
   fs.writeFileSync(
     __dirname + "/examples/tslint-result-report.json",
     JSON.stringify(result, null, 2)
