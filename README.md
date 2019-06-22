@@ -2,15 +2,15 @@
 
 Pretty tslint result in your azure pipeline
 
-![tslint-report example](images/tslint-report.jpeg)
+![tslint-report example](https://raw.githubusercontent.com/MiguelSavignano/vss-tslint-report/master/images/tslint-report.jpeg)
 
 Save report as azure artifacts.
 
-![tslint-report artifact](images/tslint-report-artifact.png)
+![tslint-report artifact](https://raw.githubusercontent.com/MiguelSavignano/vss-tslint-report/master/images/tslint-report-artifact.png)
 
-## Configure
+## Run tslint
 
-Run your tslint
+Run tslint command before this task.
 
 ```
 tslint -c tslint.json -t json --out tslint-result.json 'src/**/*.ts'
