@@ -5,18 +5,16 @@ import { getArtifactUrl } from "./helper";
 async function run() {
   try {
     const tslintResultFilePath: string = tl.getInput("filePath", true);
-    // console.log("********", workDir, tslintResultFilePath, "*************");
 
     const { reportFilePath, tslintReport } = generateReportFile(
       tslintResultFilePath
     );
-    tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
-    tl.setResult(
-      tl.TaskResult.SucceededWithIssues,
-      getArtifactUrl(tl.getVariables())
-    );
+    if (!tslintReport.length) {
+      tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
+      tl.setResult(tl.TaskResult.Failed, getArtifactUrl(tl.getVariables()));
+    }
   } catch (err) {
-    tl.setResult(tl.TaskResult.Failed, "Error Miguel");
+    tl.setResult(tl.TaskResult.Failed, err.message);
   }
 }
 

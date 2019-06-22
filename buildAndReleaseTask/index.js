@@ -44,6 +44,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var tl = __importStar(require("azure-pipelines-task-lib/task"));
 var index_1 = require("./lib/tslint-html-report/index");
+var helper_1 = require("./helper");
 function run() {
     return __awaiter(this, void 0, void 0, function () {
         var tslintResultFilePath, _a, reportFilePath, tslintReport;
@@ -52,10 +53,7 @@ function run() {
                 tslintResultFilePath = tl.getInput("filePath", true);
                 _a = index_1.generateReportFile(tslintResultFilePath), reportFilePath = _a.reportFilePath, tslintReport = _a.tslintReport;
                 tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
-                console.log(tslintReport.length);
-                console.log(tl.getVariables());
-                console.log(JSON.stringify(tl.getVariables()));
-                tl.setResult(tl.TaskResult.SucceededWithIssues, "https://miguel-savignano.visualstudio.com/_apis/resources/Containers/2517850?itemPath=tslint%2Ftslint-report.html");
+                tl.setResult(tl.TaskResult.SucceededWithIssues, helper_1.getArtifactUrl(tl.getVariables()));
             }
             catch (err) {
                 tl.setResult(tl.TaskResult.Failed, "Error Miguel");
