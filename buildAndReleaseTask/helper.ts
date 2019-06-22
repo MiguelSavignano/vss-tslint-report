@@ -12,5 +12,5 @@ export const getArtifactUrl = variables => {
     getValue(variables, "system.teamFoundationCollectionUri")
   );
   const containerId = getValue(variables, "build.containerId");
-  return `https://${organizationName}.visualstudio.com/_apis/resources/Containers/${containerId}?itemPath=tslint%2Ftslint-report.html`;
+  return `[tslint-report](https://${organizationName}.visualstudio.com/_apis/resources/Containers/${containerId}?itemPath=tslint%2Ftslint-report.html)`;
 };
