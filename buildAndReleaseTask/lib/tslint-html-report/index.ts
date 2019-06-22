@@ -99,10 +99,10 @@ export const generateReportFile = (
   const report = generateReport(tslintReport);
   const contentReport = renderHtml(report);
   fs.writeFileSync(path, contentReport);
-  return path;
+  return { reportFilePath: path, tslintReport };
 };
 
-generateReportFile("../test/examples/tslint-result.json", "tslint-report.html");
+// generateReportFile("../test/examples/tslint-result.json", "tslint-report.html");
 
 // const tslintjson = require("./tslint-result.json");
 

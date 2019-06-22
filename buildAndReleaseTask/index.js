@@ -34,20 +34,31 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var tl = require("azure-pipelines-task-lib/task");
+var tl = __importStar(require("azure-pipelines-task-lib/task"));
 var index_1 = require("./lib/tslint-html-report/index");
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var tslintResultFilePath, reportFilePath;
-        return __generator(this, function (_a) {
+        var tslintResultFilePath, _a, reportFilePath, tslintReport;
+        return __generator(this, function (_b) {
             try {
                 tslintResultFilePath = tl.getInput("filePath", true);
-                reportFilePath = index_1.generateReportFile(tslintResultFilePath);
+                _a = index_1.generateReportFile(tslintResultFilePath), reportFilePath = _a.reportFilePath, tslintReport = _a.tslintReport;
                 tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
+                console.log(tslintReport.length);
+                console.log(tl.getVariables());
+                console.log(JSON.stringify(tl.getVariables()));
+                tl.setResult(tl.TaskResult.SucceededWithIssues, "https://miguel-savignano.visualstudio.com/_apis/resources/Containers/2517850?itemPath=tslint%2Ftslint-report.html");
             }
             catch (err) {
-                tl.setResult(tl.TaskResult.Failed, err.message);
+                tl.setResult(tl.TaskResult.Failed, "Error Miguel");
             }
             return [2 /*return*/];
         });

@@ -15,17 +15,11 @@
     "azure-pipelines-task-lib": "^2.8.0",
     "ejs": "^2.6.2",
     "lodash": "^4.17.11",
-    "tslint-html-report": "^2.0.3"
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.0.8",
-    "@types/q": "^1.5.2",
-    "jest": "^24.8.0",
-    "tfx": "^1.1.0",
-    "tfx-cli": "^0.7.6",
-    "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/q": "^1.5.2"
   }
 }
