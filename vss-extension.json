@@ -2,8 +2,20 @@
   "manifestVersion": 1,
   "id": "tslint-report",
   "name": "tslint report",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "miguel-savignano",
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE.md"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/MiguelSavignano/vss-tslint-report"
+  },
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
