@@ -9,7 +9,8 @@ async function run() {
     const { reportFilePath, tslintReport } = generateReportFile(
       tslintResultFilePath
     );
-    if (!tslintReport.length) {
+
+    if (tslintReport.length) {
       tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
       tl.setResult(tl.TaskResult.Failed, getArtifactUrl(tl.getVariables()));
     }

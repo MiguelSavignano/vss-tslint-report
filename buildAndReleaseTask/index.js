@@ -52,11 +52,13 @@ function run() {
             try {
                 tslintResultFilePath = tl.getInput("filePath", true);
                 _a = index_1.generateReportFile(tslintResultFilePath), reportFilePath = _a.reportFilePath, tslintReport = _a.tslintReport;
-                tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
-                tl.setResult(tl.TaskResult.SucceededWithIssues, helper_1.getArtifactUrl(tl.getVariables()));
+                if (tslintReport.length) {
+                    tl.uploadArtifact("tslint", reportFilePath, "tslint-report");
+                    tl.setResult(tl.TaskResult.Failed, helper_1.getArtifactUrl(tl.getVariables()));
+                }
             }
             catch (err) {
-                tl.setResult(tl.TaskResult.Failed, "Error Miguel");
+                tl.setResult(tl.TaskResult.Failed, err.message);
             }
             return [2 /*return*/];
         });
