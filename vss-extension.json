@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "tslint-report",
   "name": "tslint report",
-  "version": "0.1.3",
+  "version": "0.1.8",
   "publisher": "miguel-savignano",
   "content": {
     "details": {
@@ -31,6 +31,9 @@
   "files": [
     {
       "path": "buildAndReleaseTask"
+    },
+    {
+      "path": "images"
     }
   ],
   "contributions": [
