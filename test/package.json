@@ -14,7 +14,7 @@
     "@vismalietuva/tslint-formatter-html": "^1.0.1",
     "azure-pipelines-task-lib": "^2.8.0",
     "handlebars": "^4.5.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "tslint-html-report": "^2.0.3"
   },
   "devDependencies": {
